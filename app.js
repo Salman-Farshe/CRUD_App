@@ -19,4 +19,5 @@ app.use(methodOverWrite("_method"));
  let mongoose           = require("mongoose");
  mongoose.connect("mongodb://localhost/crud_app");  // connect to the db & create crud_app. if exists then it'll use it. otherwise created automatically.
 
- 
+ // ==================================== required files ==========================
+ let Crud   = require("./models/model");

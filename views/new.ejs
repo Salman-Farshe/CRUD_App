@@ -1,0 +1,13 @@
+<!-- export header file from the partials directory -->
+<%- include("partials/header") %>
+
+<div class="container-fluid new">
+    <form action="/" method="post">
+        <input type="text" name="name" id="name" placeholder="Name">
+        <input type="text" name="img" id="img" placeholder="Image URL">
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+</div>
+
+<!-- export footer file from the partials directory -->
+<%- include("partials/footer") %>

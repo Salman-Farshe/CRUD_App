@@ -16,6 +16,11 @@ app.get("/", (req, res) => {
     });
 });
 
+// New Routes - shows new form for new data entry
+app.get("/new", (req, res) => {
+    res.render("new");
+});
+
 // listening for
 app.listen(port, () => {
     console.log("Server Starting...");

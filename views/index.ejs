@@ -1,0 +1,36 @@
+<!-- export header file from the partials directory -->
+<%- include("partials/header") %>
+
+<div class="container-fluid info">
+    <!-- header part -->
+    <div class="info__header">
+        <h1>
+            Gallery
+        </h1>
+        <p class="lead">
+            Where you got everything you need... 
+        </p>
+    </div>
+    <!-- main part / gallery -->
+    <div class="info__main">
+        <% info.forEach(data => { %>
+
+            <div class="info__main__gallery">
+                <h3>
+                    <%= data.name %>
+                </h3>
+                <img class="w-100 h-50" src=" <%= data.image %> ">
+            </div>
+            <!-- button -->
+            <div class="info__footer">
+                <a class="btn btn-primary btn-outline-success" href="">Edit</a>
+                <a class="btn btn-danger btn-outline-danger" href="">Delete</a>
+            </div>
+
+        <% }); %>
+    </div>
+    
+</div>
+
+<!-- export footer file from the partials directory -->
+<%- include("partials/footer") %>

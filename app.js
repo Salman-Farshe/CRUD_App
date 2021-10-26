@@ -7,7 +7,7 @@ let express             = require("express"),
 
 // ====================================== config =================================
 // don't need to use .ejs extention
-app.set("view engine", "ejs")
+app.set("view engine", "ejs");
 // tell express to serve the content of the public directory
 app.use(express.static("public"));
 // retrive data from the body
@@ -21,3 +21,4 @@ app.use(methodOverWrite("_method"));
 
  // ==================================== required files ==========================
  let Crud   = require("./models/model");
+ let Routes = require("./routes/route");

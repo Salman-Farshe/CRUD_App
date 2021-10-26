@@ -1,0 +1,15 @@
+<!-- export header file from the partials directory -->
+<%- include("partials/header") %>
+
+<div class="container-fluid new">
+    <form method="POST">
+        <input type="text" name="name" id="name" value=" <%= editData.name %> ">
+        <input type="text" name="img" id="img" value=" <%= editData.image %> ">
+        <input type="text" name="desc" id="desc" value=" <%= editData.description %> ">
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+    <a href="/" class="btn btn-primary">Back to Home</a>
+</div>
+
+<!-- export footer file from the partials directory -->
+<%- include("partials/footer") %>

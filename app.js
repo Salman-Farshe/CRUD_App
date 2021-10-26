@@ -102,6 +102,19 @@ app.get("/:id", (req, res) => {
     });
 });
 
+//===============================================================
+// Edit Routes - Show edit form for one specific items
+app.get("/:id/edit", (req, res) => {
+    Crud.findById(req.params.id, (err, foundInfo) => {
+        if(err){
+            res.redirect("/");
+        } else{
+            res.render("edit", {editData: foundInfo});
+        }
+    });
+});
+
+
 //================================================================
 // listening for
 app.listen(port, () => {

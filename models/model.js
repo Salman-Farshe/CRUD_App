@@ -11,6 +11,6 @@ let crudSchema  = new Schema({
 });
 
 // compile that schema into the model
-let Crud    = mongoose.model("crud", crudSchema);   // creating a cruds collections into the database
+let Crud    = mongoose.model("Crud", crudSchema);   // creating a cruds collections into the database
 // tell node.js exports file to another place
 module.exports = Crud;

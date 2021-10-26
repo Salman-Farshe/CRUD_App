@@ -1,0 +1,21 @@
+<!-- export header file from the partials directory -->
+<%- include("partials/header") %>
+
+<div class="container-fluid show">
+    <h1>
+        <%= data.name %>
+    </h1>
+    <img src=" <%= data.image %> ">
+    <div>
+        <%= data.description %>
+    </div>
+    <a class="btn btn-primary btn-outline-success" href="">Edit</a>
+    <a class="btn btn-danger btn-outline-danger" href="">Delete</a>
+</div>
+
+<div>
+    <a href="/" class="btn btn-primary">Back to Home</a>
+</div>
+
+<!-- export footer file from the partials directory -->
+<%- include("partials/footer") %>

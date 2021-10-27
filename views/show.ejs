@@ -10,7 +10,10 @@
         <%= data.description %>
     </div>
     <a class="btn btn-primary btn-outline-success" href="/<%=data._id%>/edit">Edit</a>
-    <a class="btn btn-danger btn-outline-danger" href="">Delete</a>
+    <!-- delete button -->
+    <form action="/<%=data._id%>?_method=DELETE" method="post">
+        <button class="btn btn-primary">Delete</button>
+    </form>
 </div>
 
 <div>

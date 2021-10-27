@@ -133,6 +133,19 @@ app.put("/:id", (req, res) => {
     });
 });
 
+//==================================================================
+// Destroy Routes - delete that specific items
+app.delete("/:id", (req, res) => {
+    Crud.findByIdAndRemove(req.params.id, (err, deleteInfo) => {
+        if(err){
+            res.redirect("/");
+        } else{
+            res.redirect("/");
+        }
+    });
+});
+
+
 //================================================================
 // listening for
 app.listen(port, () => {

@@ -2,7 +2,7 @@
 <%- include("partials/header") %>
 
 <div class="container-fluid new">
-    <form method="POST">
+    <form action="/<%= editData._id %>?_method=PUT" method="POST">
         <input type="text" name="name" id="name" value=" <%= editData.name %> ">
         <input type="text" name="img" id="img" value=" <%= editData.image %> ">
         <input type="text" name="desc" id="desc" value=" <%= editData.description %> ">

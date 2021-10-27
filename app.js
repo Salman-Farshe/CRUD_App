@@ -114,6 +114,24 @@ app.get("/:id/edit", (req, res) => {
     });
 });
 
+//===============================================================
+// Update Routes - update that specific items
+app.put("/:id", (req, res) => {
+    // which _id are looking for, what data want to update
+    let newInfo = {
+        name: req.body.name,
+        image: req.body.img,
+        description: req.body.desc
+    }
+
+    Crud.findByIdAndUpdate(req.params.id, newInfo, (err, updatedInfo) => {
+        if(err){
+            res.redirect("/");
+        } else{
+            res.redirect("/" + req.params.id);
+        }
+    });
+});
 
 //================================================================
 // listening for

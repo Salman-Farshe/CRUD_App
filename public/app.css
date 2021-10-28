@@ -75,3 +75,34 @@ body {
         margin-top: 0.8rem; }
         .info__main__gallery .info__footer a {
           color: #ffffff; }
+
+.new {
+  max-width: 80%;
+  min-height: 100vh;
+  padding: 3rem;
+  text-align: center;
+  background-color: #ecf0f1; }
+  .new a {
+    margin-left: 2rem;
+    float: left; }
+  .new form {
+    width: 100%;
+    margin: 2rem auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, auto); }
+    .new form input[type="text"] {
+      margin-top: 1rem;
+      padding: 0.5rem;
+      border: #27ae60 solid 2px;
+      border-radius: 1rem; }
+      .new form input[type="text"]:focus {
+        border: none; }
+    .new form button {
+      margin-top: 2rem;
+      padding: 0.5rem 2rem;
+      justify-self: flex-end; }
+      .new form button:focus, .new form button:hover {
+        background-color: #27ae60;
+        border: #27ae60 solid 1px; }

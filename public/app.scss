@@ -110,3 +110,50 @@ body{
 }
 
 
+
+// ===========================================================
+// new routes directory - create new gallery
+
+.new{
+    max-width: 80%;
+    min-height: 100vh;
+    padding: 3rem;
+    text-align: center;
+    background-color: #ecf0f1;
+
+    & a{
+        margin-left: 2rem;
+        float: left;
+    }
+
+    & form{
+        width: 100%;
+        margin: 2rem auto;
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4, auto);
+
+        & input[type="text"]{
+            margin-top: 1rem;
+            padding: 0.5rem;
+            border: #27ae60 solid 2px;
+            border-radius: 1rem;
+
+            &:focus{
+                border: none;
+            }
+        }
+
+        & button{
+            margin-top: 2rem;
+            padding: 0.5rem 2rem;
+            justify-self: flex-end;
+
+            &:focus, &:hover{
+                background-color: #27ae60;
+                border: #27ae60 solid 1px;
+            }
+        }
+    }
+}

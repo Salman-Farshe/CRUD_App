@@ -26,6 +26,34 @@ body{
     color: #2c3e50;
 }
 
+//============================================
+// responsive
+
+$custom1: 75em;
+$custom2: 53em;
+$custom3: 37.5em;
+
+
+@mixin responsive($breakpoint) {
+    @if($breakpoint == custom1){
+        @media (max-width: 75em) {
+            @content;
+        }
+    }
+
+    @if($breakpoint == custom2){
+        @media (max-width: 53em){
+            @content;
+        }
+    }
+
+    @if($breakpoint == custom3){
+        @media (max-width: 37.5em){
+            @content;
+        }
+    }
+}
+
 //=======================================================
 // index routes directory - home page
 
@@ -36,9 +64,14 @@ body{
     grid-template-rows: 20% 80%;
     justify-items: center;
 
+    @include responsive(custom3){
+        grid-template-rows: 10% 90%;
+    }
+
     &__header{
         text-align: center;
         padding: 1rem 0rem;
+        overflow: hidden;
 
         h1{
             letter-spacing: 0.3rem;
@@ -67,6 +100,23 @@ body{
         grid-auto-flow: row;
         justify-content: center;
 
+        @include responsive(custom1){
+            grid-template-columns: repeat(3, auto);
+            grid-template-rows: auto;
+        }
+
+        @include responsive(custom2){
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: auto;
+        }
+
+        @include responsive(custom3){
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+            grid-gap: 1rem;
+            padding: 1rem;
+        }
+
 
         &__gallery{
             width: 100%;
@@ -83,9 +133,14 @@ body{
 
             h3{
                 justify-self: center;
+                font-size: 1.5rem;
 
                 & .icon-cog{
                     color: royalblue;
+                }
+
+                @include responsive(custom1){
+                    font-size: 1.3rem;
                 }
             }
 
@@ -121,6 +176,11 @@ body{
     text-align: center;
     background-color: #ecf0f1;
 
+    @include responsive(custom3){
+        max-width: 90%;
+        padding: 2rem;
+    }
+
     & a{
         margin-left: 2rem;
         float: left;
@@ -133,6 +193,10 @@ body{
         display: grid;
         grid-template-columns: auto;
         grid-template-rows: repeat(4, auto);
+
+        @include responsive(custom3){
+            padding: 1rem;
+        }
 
         & input[type="text"]{
             margin-top: 1rem;
@@ -196,4 +260,18 @@ body{
             hyphens: auto;
         }
     }
+}
+
+
+
+// ===========================================================
+// footer
+
+footer{
+    max-width: 100%;
+    min-height: auto;
+    padding: 0.5rem;
+    color: #ffffff;
+    background-color: #e67e22;
+    text-align: center;
 }

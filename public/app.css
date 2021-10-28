@@ -28,9 +28,13 @@ body {
   display: grid;
   grid-template-rows: 20% 80%;
   justify-items: center; }
+  @media (max-width: 37.5em) {
+    .info {
+      grid-template-rows: 10% 90%; } }
   .info__header {
     text-align: center;
-    padding: 1rem 0rem; }
+    padding: 1rem 0rem;
+    overflow: hidden; }
     .info__header h1 {
       letter-spacing: 0.3rem;
       color: #e67e22; }
@@ -51,6 +55,20 @@ body {
     grid-gap: 2rem;
     grid-auto-flow: row;
     justify-content: center; }
+    @media (max-width: 75em) {
+      .info__main {
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: auto; } }
+    @media (max-width: 53em) {
+      .info__main {
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: auto; } }
+    @media (max-width: 37.5em) {
+      .info__main {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-gap: 1rem;
+        padding: 1rem; } }
     .info__main__gallery {
       width: 100%;
       height: 100%;
@@ -62,9 +80,13 @@ body {
       align-items: flex-start;
       border: 5px solid #fa983a; }
       .info__main__gallery h3 {
-        justify-self: center; }
+        justify-self: center;
+        font-size: 1.5rem; }
         .info__main__gallery h3 .icon-cog {
           color: royalblue; }
+        @media (max-width: 75em) {
+          .info__main__gallery h3 {
+            font-size: 1.3rem; } }
       .info__main__gallery img {
         display: block;
         width: 100%;
@@ -82,6 +104,10 @@ body {
   padding: 3rem;
   text-align: center;
   background-color: #ecf0f1; }
+  @media (max-width: 37.5em) {
+    .new {
+      max-width: 90%;
+      padding: 2rem; } }
   .new a {
     margin-left: 2rem;
     float: left; }
@@ -92,6 +118,9 @@ body {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: repeat(4, auto); }
+    @media (max-width: 37.5em) {
+      .new form {
+        padding: 1rem; } }
     .new form input[type="text"] {
       margin-top: 1rem;
       padding: 0.5rem;
@@ -128,3 +157,11 @@ body {
     max-width: 100%;
     min-height: auto;
     hyphens: auto; }
+
+footer {
+  max-width: 100%;
+  min-height: auto;
+  padding: 0.5rem;
+  color: #ffffff;
+  background-color: #e67e22;
+  text-align: center; }

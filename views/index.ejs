@@ -5,28 +5,31 @@
     <!-- header part -->
     <div class="info__header">
         <h1>
-            Gallery
+            CRUD Gallery
         </h1>
         <p class="lead">
             Where you got everything you need... 
         </p>
         <div class="createNew">
-            <a href="/new" class="btn btn-primary">Create</a>
+            <a href="/new" class="btn btn-primary">Create New Gallery</a>
         </div>
     </div>
-    <!-- main part / gallery -->
+    <!-- main part -->
     <div class="info__main">
         <% info.forEach(data => { %>
 
             <div class="info__main__gallery">
+                <!-- title -->
                 <h3>
+                    <i class="icon-cog fas fa-space-shuttle fa-1x"></i>
                     <%= data.name %>
                 </h3>
-                <img class="w-25 h-25" src=" <%= data.image %> ">
-            </div>
-            <!-- button -->
-            <div class="info__footer">
-                <a class="btn btn-primary btn-outline-success" href="/<%= data._id %> ">Details</a>
+                <!-- image -->
+                <img src=" <%= data.image %> ">
+                <!-- button -->
+                <div class="info__footer">
+                    <a class="btn btn-success btn-outline-primary" href="/<%= data._id %> ">Details</a>
+                </div>
             </div>
 
         <% }); %>

@@ -2,23 +2,32 @@
 <%- include("partials/header") %>
 
 <div class="container-fluid show">
-    <h1>
-        <%= data.name %>
-    </h1>
-    <img src=" <%= data.image %> ">
-    <div>
-        <%= data.description %>
+    <!-- back to home button -->
+    <div class="show__to__home">
+        <a href="/" class="btn btn-primary"> <i class="fas fa-backward"></i> Back to Home</a>
     </div>
-    <a class="btn btn-primary btn-outline-success" href="/<%=data._id%>/edit">Edit</a>
-    <!-- delete button -->
-    <form action="/<%=data._id%>?_method=DELETE" method="post">
-        <button class="btn btn-primary">Delete</button>
-    </form>
+    <!-- actual content -->
+    <div class="show__list">
+        <h1>
+            <%= data.name %>
+        </h1>
+        <img src=" <%= data.image %> ">
+        <!-- Edit & Delete button -->
+        <div class="show__list__button">
+            <a class="btn btn-primary mx-3" href="/<%=data._id%>/edit">Edit</a>
+            <!-- delete button -->
+            <form action="/<%=data._id%>?_method=DELETE" method="post">
+                <button class="btn btn-danger">Delete</button>
+            </form>
+        </div>
+        <!-- details content -->
+        <div class="show__list__details">
+            <%= data.description %>
+        </div>
+    </div>
+
 </div>
 
-<div>
-    <a href="/" class="btn btn-primary">Back to Home</a>
-</div>
 
 <!-- export footer file from the partials directory -->
 <%- include("partials/footer") %>

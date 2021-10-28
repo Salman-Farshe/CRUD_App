@@ -157,3 +157,43 @@ body{
         }
     }
 }
+
+
+
+//===========================================================
+// Show Routes - 
+
+.show{
+    max-width: 90%;
+    min-height: 100vh;
+    padding: 3rem;
+
+    &__to__home{
+        margin-bottom: 1rem;
+    }
+
+    &__list{
+        img, &__button{
+            display: block;
+            width: 80%;
+            height: 60%;
+        }
+
+        &__button{
+            margin: 1rem 0rem;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: end;
+
+            & a{
+                color: #ffffff;
+            }
+        }
+
+        &__details{
+            max-width: 100%;
+            min-height: auto;
+            hyphens: auto;
+        }
+    }
+}

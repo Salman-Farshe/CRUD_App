@@ -2,9 +2,10 @@
 <%- include("partials/header") %>
 
 <div class="container-fluid new">
-    <a href="/" class="btn btn-primary clearfix">Back to Home</a>
+    <a href="/" class="btn btn-primary clearfix">
+        <i class="fas fa-backward"></i> Back to Home</a>
     <form action="/" method="POST">
-        <input type="text" name="name" id="name" placeholder="Name" required>
+        <input type="text" name="name" id="name" placeholder="Title" required>
         <input type="text" name="img" id="img" placeholder="Image URL" required>
         <input type="text" name="desc" id="desc" placeholder="Description" required>
         <button type="submit" class="btn btn-primary">Create</button>

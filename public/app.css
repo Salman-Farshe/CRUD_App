@@ -106,3 +106,25 @@ body {
       .new form button:focus, .new form button:hover {
         background-color: #27ae60;
         border: #27ae60 solid 1px; }
+
+.show {
+  max-width: 90%;
+  min-height: 100vh;
+  padding: 3rem; }
+  .show__to__home {
+    margin-bottom: 1rem; }
+  .show__list img, .show__list__button {
+    display: block;
+    width: 80%;
+    height: 60%; }
+  .show__list__button {
+    margin: 1rem 0rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: end; }
+    .show__list__button a {
+      color: #ffffff; }
+  .show__list__details {
+    max-width: 100%;
+    min-height: auto;
+    hyphens: auto; }

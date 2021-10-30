@@ -19,8 +19,9 @@ app.use(methodOverWrite("_method"));
 
 // ===================================== mongo DB config ==========================
  let mongoose           = require("mongoose");
- mongoose.connect("mongodb://localhost/crud_app");  // connect to the db & create crud_app. if exists then it'll use it. otherwise created automatically.
+ // mongoose.connect("mongodb://localhost/crud_app");  // connect to the db & create crud_app. if exists then it'll use it. otherwise created automatically.
 
+ mongoose.connect("mongodb+srv://user1:<user1>@crudapp.q46n6.mongodb.net/crud_app?retryWrites=true&w=majority");
 
  // ==================================== Schema Model ==============================
  // define a Schema 

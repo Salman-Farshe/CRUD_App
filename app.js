@@ -21,8 +21,13 @@ app.use(methodOverWrite("_method"));
  let mongoose           = require("mongoose");
  // mongoose.connect("mongodb://localhost/crud_app");  // connect to the db & create crud_app. if exists then it'll use it. otherwise created automatically.
 
- mongoose.connect("mongodb+srv://user1:user1@crudapp.q46n6.mongodb.net/crud_app?retryWrites=true&w=majority");
+ // mongoose.connect("mongodb+srv://user1:user1@crudapp.q46n6.mongodb.net/crud_app?retryWrites=true&w=majority");
 
+    mongoose.connect(process.env.DATABASEURL);
+
+//Another option .......with environment variable....
+// let url = process.env.DATABASEURL || "mongodb://localhost/crud_app";
+// mongoose.connect(url);
  // ==================================== Schema Model ==============================
  // define a Schema 
 let Schema      = mongoose.Schema;
@@ -149,6 +154,6 @@ app.delete("/:id", (req, res) => {
 
 //================================================================
 // listening for
-app.listen(port, () => {
+app.listen(port, process.env.IP, () => {
     console.log("Server Starting...");
 });
